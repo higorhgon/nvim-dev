@@ -1,14 +1,5 @@
 return {
 	{
-		"letieu/harpoon-lualine",
-		dependencies = {
-			{
-				"ThePrimeagen/harpoon",
-				branch = "harpoon2",
-			},
-		},
-	},
-	{
 		"nvim-lualine/lualine.nvim",
 		dependencies = {
 			"nvim-tree/nvim-web-devicons",
@@ -94,15 +85,6 @@ return {
 						-- { "macro-recording", fmt = show_macro_recording }
 					},
 					lualine_c = {
-						{
-							"harpoon2",
-							icon = "",
-							-- indicators = { "a", "s", "q", "w" },
-							-- active_indicators = { "A", "S", "Q", "W" },
-							color_active = { fg = "#00ff00" },
-							_separator = " ",
-							-- no_harpoon = "Harpoon not loaded",
-						},
 						"filename",
 					},
 					lualine_x = { "encoding", "fileformat", "filetype" },
