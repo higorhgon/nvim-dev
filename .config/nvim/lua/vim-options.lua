@@ -12,16 +12,24 @@ vim.opt.number = true
 
 -- Clipboard Opts
 vim.opt.clipboard = "unnamedplus"
-vim.g.clipboard = {
-    name = "OSC 52",
-    -- On Linux and Windows use + register, on macOS use * register
-    copy = {
-        ["+"] = require("vim.ui.clipboard.osc52").copy("+"),
-    },
-    paste = {
-        ["+"] = require("vim.ui.clipboard.osc52").paste("+"),
-    },
-}
+
+-- Verifica se está em uma sessão SSH
+local is_ssh_session = os.getenv("SSH_CONNECTION") ~= nil or os.getenv("SSH_CLIENT") ~= nil
+
+if is_ssh_session then
+    vim.g.clipboard = {
+        name = "OSC 52",
+        -- No Linux e Windows use o registrador +, no macOS use o registrador *
+        copy = {
+            ["+"] = require("vim.ui.clipboard.osc52").copy("+"),
+            ["*"] = require("vim.ui.clipboard.osc52").copy("*")
+        },
+        paste = {
+            ["+"] = require("vim.ui.clipboard.osc52").paste("+"),
+            ["*"] = require("vim.ui.clipboard.osc52").paste("*")
+        },
+    }
+end
 
 -- Folding Opts
 vim.opt.foldenable = true
