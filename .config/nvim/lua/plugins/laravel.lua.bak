@@ -4,6 +4,7 @@ return {
         -- from Neovim.
         "adalessa/laravel.nvim",
         dependencies = {
+            "nvim-lua/plenary.nvim",
             "tpope/vim-dotenv",
             "folke/snacks.nvim",
             "MunifTanjim/nui.nvim",
