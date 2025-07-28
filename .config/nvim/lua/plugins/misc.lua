@@ -1,17 +1,17 @@
 return {
-    {
-        "sphamba/smear-cursor.nvim",
-        cond = function()
-            -- Verifica se a OS env TERM é diferente de "xterm-kitty" para não adicionar o smear-cursor.nvim
-            -- Isso é necessário para que o plugin não seja carregado no terminal Kitty.
-            return os.getenv("TERM") ~= "xterm-kitty"
-        end,
-        opts = {},
-    },
-    {
-        "arnamak/stay-centered.nvim",
-        opts = {},
-    },
+    -- {
+    --     "sphamba/smear-cursor.nvim",
+    --     cond = function()
+    --         -- Verifica se a OS env TERM é diferente de "xterm-kitty" para não adicionar o smear-cursor.nvim
+    --         -- Isso é necessário para que o plugin não seja carregado no terminal Kitty.
+    --         return os.getenv("TERM") ~= "xterm-kitty"
+    --     end,
+    --     opts = {},
+    -- },
+    -- {
+    --     "arnamak/stay-centered.nvim",
+    --     opts = {},
+    -- },
     {
         'MagicDuck/grug-far.nvim',
         -- Note (lazy loading): grug-far.lua defers all it's requires so it's lazy by default
