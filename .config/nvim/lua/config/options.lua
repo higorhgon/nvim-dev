@@ -31,4 +31,7 @@ vim.o.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 -- Map Leader Key
 vim.g.mapleader = " "
 
-vim.diagnostic.config({ virtual_lines = false })
+vim.diagnostic.config({
+    virtual_text = false,
+    virtual_lines = false
+})
