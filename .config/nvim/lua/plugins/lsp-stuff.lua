@@ -16,7 +16,6 @@ require("mason-tool-installer").setup({
 		"typescript-language-server",
 		-- Formatters and linters
 		"blade-formatter",
-		-- "nixfmt",
 		"phpcs",
 		"php-cs-fixer",
 		"rustywind",
