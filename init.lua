@@ -91,6 +91,7 @@ require("mini.clue").setup({
 	},
 
 	clues = {
+		{ mode = "n", keys = "<leader>b", desc = "+Buffer" },
 		{ mode = "n", keys = "<leader>c", desc = "+Code" },
 		{ mode = "n", keys = "<leader>f", desc = "+Find" },
 		{ mode = "n", keys = "<leader>s", desc = "+Search" },
@@ -413,9 +414,9 @@ vim.keymap.set("n", "<leader>cf", function()
 	require("conform").format({ async = true, lsp_format = "fallback" })
 end, { desc = "Code Format" })
 vim.keymap.set("n", "grf", vim.lsp.buf.format, { desc = "vim.lsp.buf.format()" })
-vim.keymap.set('n', '<S-h>', ':bprevious<CR>', { desc = "Buffer anterior" })
-vim.keymap.set('n', '<S-l>', ':bnext<CR>', { desc = "Próximo buffer" })
-vim.keymap.set('n', '<leader>bd', ':bdelete<CR>', { desc = "Deletar buffer" })
+vim.keymap.set('n', '<S-h>', ':bprevious<CR>', { desc = "Previous Buffer" })
+vim.keymap.set('n', '<S-l>', ':bnext<CR>', { desc = "Next Buffer" })
+vim.keymap.set('n', '<leader>bd', ':bdelete<CR>', { desc = "Buffer Delete" })
 
 -----------------------------------------
 ---           AUTOCMD                 ---
