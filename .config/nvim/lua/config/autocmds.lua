@@ -1,5 +1,5 @@
 -----------------------------------------
----           AUTOCMD                 ---
+---           AUTOCMDS                ---
 -----------------------------------------
 -- Keymap para inserir tags PHP sem problema
 vim.api.nvim_create_autocmd("FileType", {

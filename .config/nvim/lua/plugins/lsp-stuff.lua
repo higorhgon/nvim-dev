@@ -37,7 +37,7 @@ vim.lsp.enable({
 	"bashls",
 })
 
--- Fix para obter as Globais do Neovim e não haver erros arquivos de configura .lua
+-- Fix para obter as Globais do Neovim e não haver erros arquivos de configuração .lua
 vim.lsp.config("lua_ls", {
 	settings = {
 		Lua = {
