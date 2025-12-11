@@ -26,16 +26,6 @@ require("mason-tool-installer").setup({
 	auto_update = true,
 })
 
-vim.lsp.enable({
-	"intelephense",
-	"ts_ls",
-	"html",
-	"cssls",
-	"tailwindcss",
-	"lua_ls",
-	"bashls",
-})
-
 -- Fix para obter as Globais do Neovim e não haver erros arquivos de configuração .lua
 vim.lsp.config("lua_ls", {
 	settings = {
@@ -47,19 +37,14 @@ vim.lsp.config("lua_ls", {
 	},
 })
 
-vim.lsp.config("intelephense", {
-	settings = {
-		intelephense = {
-			format = {
-				enable = false, -- Desabilita formatação do Intelephense
-			},
-		},
-	},
-	on_attach = function(client)
-		-- Desabilita capacidades de formatação do LSP
-		client.server_capabilities.documentFormattingProvider = false
-		client.server_capabilities.documentRangeFormattingProvider = false
-	end,
+vim.lsp.enable({
+	"intelephense",
+	"ts_ls",
+	"html",
+	"cssls",
+	"tailwindcss",
+	"lua_ls",
+	"bashls",
 })
 
 require("conform").setup({
@@ -88,8 +73,8 @@ require("conform").setup({
 		},
 		php = {
 			"php_cs_fixer",
-			lsp_format = "fallback",
-			stop_after_first = true,
+			-- lsp_format = "fallback",
+			-- stop_after_first = true,
 		},
 	},
 	formatters = {
@@ -119,6 +104,10 @@ require("conform").setup({
 	},
 	default_format_opts = {
 		lsp_format = "fallback",
+	},
+	format_on_save = {
+		timeout_ms = 500,
+		lsp_fallback = true,
 	},
 })
 vim.o.formatexpr = "v:lua.require'conform'.formatexpr()"
