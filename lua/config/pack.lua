@@ -8,6 +8,7 @@ vim.pack.add({
 		version = "main",
 	},
 	"https://github.com/nvim-treesitter/nvim-treesitter-context",
+    "https://github.com/windwp/nvim-ts-autotag",
 	"https://github.com/mason-org/mason.nvim",
 	"https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim",
 	"https://github.com/neovim/nvim-lspconfig",
