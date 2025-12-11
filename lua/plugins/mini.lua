@@ -41,7 +41,13 @@ require("mini.clue").setup({
 require("mini.cmdline").setup({})
 require("mini.completion").setup({})
 require("mini.cursorword").setup({})
-require("mini.files").setup({})
+require("mini.files").setup({
+	windows = {
+		preview = true,
+		width_focus = 30,
+		width_preview = 30,
+	},
+})
 require("mini.hipatterns").setup({
 	highlighters = {
 		-- Highlight standalone 'FIXME', 'HACK', 'TODO', 'NOTE'
@@ -58,6 +64,7 @@ require("mini.icons").setup({})
 require("mini.indentscope").setup({
 	draw = {
 		delay = 0,
+		animation = require("mini.indentscope").gen_animation.none(),
 	},
 	options = {
 		indent_at_cursor = true,
