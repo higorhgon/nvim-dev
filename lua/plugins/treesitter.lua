@@ -53,6 +53,15 @@ require("nvim-treesitter.configs").setup({
 		-- Instead of true it can also be a list of languages
 		additional_vim_regex_highlighting = false,
 	},
+	incremental_selection = {
+		enable = true,
+		keymaps = {
+			init_selection = "<M-o>",
+			node_incremental = "<M-o>",
+			scope_incremental = "<M-O>",
+			node_decremental = "<M-i>",
+		},
+	},
 })
 
 vim.api.nvim_create_autocmd("PackChanged", {
