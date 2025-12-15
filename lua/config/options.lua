@@ -9,6 +9,7 @@ vim.opt.shiftwidth = 4
 vim.opt.autoindent = true
 vim.opt.smartindent = true
 vim.opt.wrap = false
+vim.opt.ignorecase = false
 vim.opt.winborder = "rounded"
 vim.opt.fillchars = {
 	eob = " ",
@@ -32,6 +33,6 @@ vim.o.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 vim.g.mapleader = " "
 
 vim.diagnostic.config({
-    virtual_text = false,
-    virtual_lines = false
+	virtual_text = false,
+	virtual_lines = false,
 })
